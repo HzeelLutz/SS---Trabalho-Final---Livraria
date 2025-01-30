@@ -1,0 +1,42 @@
+POST http://localhost:3333/livros
+Content-Type: application/json
+
+{
+    "titulo": "Livro 01",
+    "autor": "Autor 01",
+    "npaginas": 400,
+    "editora": "Editora 01"
+}
+
+###
+
+GET http://localhost:3333/livros
+
+###
+
+GET http://localhost:3333/livros?search=Dom
+
+###
+
+PUT http://localhost:3333/livros/a9c3acbf-0374-402f-bd9b-ba34c9aabbe6
+Content-Type: application/json
+
+{
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "npaginas": 347,
+    "editora": "Buzz"
+}
+
+
+###
+PATCH http://localhost:3333/livros/a9c3acbf-0374-402f-bd9b-ba34c9aabbe6
+Content-Type: application/json
+
+{
+    "titulo": "Entropia"
+}
+
+###
+
+DELETE http://localhost:3333/livros/21a39e39-2777-4332-8de9-5c41ad88427f
