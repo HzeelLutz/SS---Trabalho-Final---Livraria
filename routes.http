@@ -2,10 +2,12 @@ POST http://localhost:3333/livros
 Content-Type: application/json
 
 {
-    "titulo": "Livro 01",
-    "autor": "Autor 01",
-    "npaginas": 400,
-    "editora": "Editora 01"
+    "titulo": "Livro 73",
+    "autor": "Autor 73",
+    "npaginas": 73,
+    "editora": "Editora 73",
+    "ano": "7337",
+    "idioma": "Latim"
 }
 
 ###
@@ -14,29 +16,57 @@ GET http://localhost:3333/livros
 
 ###
 
-GET http://localhost:3333/livros?search=Dom
+GET http://localhost:3333/livros?search=Hesperio
 
 ###
 
-PUT http://localhost:3333/livros/a9c3acbf-0374-402f-bd9b-ba34c9aabbe6
+PUT http://localhost:3333/livros/71f9bd60-5334-4f9e-a696-2dd72fec4d20
 Content-Type: application/json
 
 {
-    "titulo": "Dom Casmurro",
-    "autor": "Machado de Assis",
-    "npaginas": 347,
-    "editora": "Buzz"
-}
-
-
-###
-PATCH http://localhost:3333/livros/a9c3acbf-0374-402f-bd9b-ba34c9aabbe6
-Content-Type: application/json
-
-{
-    "titulo": "Entropia"
+    "titulo": "Hesperio Garra de Aguilhão",
+    "autor": "Elton Mesquita",
+    "npaginas": 312,
+    "editora": "Sétimo Selo; 1ª edição",
+    "ano": "2021",
+    "idioma": "Português"
 }
 
 ###
 
-DELETE http://localhost:3333/livros/21a39e39-2777-4332-8de9-5c41ad88427f
+PUT http://localhost:3333/livros/965ab75f-8658-431a-b809-c0171f580793
+Content-Type: application/json
+
+{
+    "titulo": "Pequeno Príncipe",
+    "autor": "Antoine de Saint-Exupéry",
+    "npaginas": 96,
+    "editora": "HarperCollins; 1ª edição",
+    "ano": "1943",
+    "idioma": "Francês"
+}
+
+###
+PUT http://localhost:3333/livros/c593c7e2-63b3-4c6f-b6dc-bf32ca4eeba0
+Content-Type: application/json
+
+{
+    "titulo": "Tartarugas Até Lá Embaixo",
+    "autor": "John Green",
+    "npaginas": 272,
+    "editora": "Intrínseca; 1ª edição",
+    "ano": "2017",
+    "idioma": "Inglês"
+}
+
+###
+PATCH http://localhost:3333/livros/965ab75f-8658-431a-b809-c0171f580793
+Content-Type: application/json
+
+{
+    "titulo": "Garra Aranha"
+}
+
+###
+
+DELETE http://localhost:3333/livros/c593c7e2-63b3-4c6f-b6dc-bf32ca4eeba0

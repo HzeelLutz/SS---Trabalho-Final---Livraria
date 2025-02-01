@@ -22,13 +22,15 @@ server.get('/livros', (request) => {
 // Criando um livro
 server.post('/livros', (request, reply) => {
     //Acessando dados do corpo
-    const {titulo, autor, npaginas, editora} = request.body
+    const {titulo, autor, npaginas, editora, ano, idioma} = request.body
     
     database.create({
         titulo: titulo,
         autor: autor,
         npaginas: npaginas,
         editora: editora,
+        ano: ano,
+        idioma: idioma,
     })
     
     // retornando que foi criado
@@ -39,12 +41,14 @@ server.put('/livros/:id', (request, reply) =>{
 // Passando ID do livro
     const livroId = request.params.id
 // Passando o restante dos atributos
-    const {titulo, autor, npaginas, editora} = request.body
+    const {titulo, autor, npaginas, editora, ano, idioma} = request.body
     const livro = database.update(livroId, {
         titulo,
         autor,
         npaginas,
         editora,
+        ano,
+        idioma,
     })
 // Sucesso sem conteudo
     return reply.status(204).send()
